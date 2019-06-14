@@ -76,15 +76,15 @@ class misp_custom:
 					tag_type = value
 				elif value == "malware":
 					tag_type = value
-				elif value == "bec/scam":
+				elif value == "bec/spam":
 					tag_type = value
 				elif value == "dump":
 					tag_type = value
 				elif (value == "apt") or (value == "APT"):
 					tag_type = value
 		if tag_type:
-			self.misp_logger.info('Setting tag to ir8: %s' %tag_type)
-			tag = "ir8:" + tag_type
+			self.misp_logger.info('Setting tag to jcsc: %s' %tag_type)
+			tag = "jcsc:" + tag_type
 			tags.append(tag)
 		else:
 			tags = None

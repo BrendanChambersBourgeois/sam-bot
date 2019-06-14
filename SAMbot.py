@@ -109,9 +109,9 @@ def parse_bot_commands(slack_events):
 						url = file["url_private_download"]
 						title = file["title"]
 						if title == "Untitled":
-							strTitle = "#Warroom"
+							strTitle = "#manual_ioc"
 						else:
-							strTitle = "#Warroom " + title
+							strTitle = "#manual_ioc " + title
 						headers = {'Authorization': 'Bearer '+token}
 						r = requests.get(url, headers=headers)
 						content = r.content.decode("utf-8")
@@ -194,7 +194,8 @@ if __name__ == "__main__":
 			except Exception as e:
 				error = traceback.format_exc()
 				logger.error(error)
-				helperFunc.respond_channel("The bot has caught a fatal error. Please review the error log. Exiting now.", "#Warroom")
+				helperFunc.respond_channel("The bot has caught a fatal error. Please review the error log. Exiting now.", "#bot-test")
+
 				online = False
 
 	else:

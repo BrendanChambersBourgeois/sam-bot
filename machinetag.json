@@ -27,7 +27,7 @@
     }
   ],
   "version": 1,
-  "description": "Tags Defined for IR8 specific information",
-  "namespace": "ir8",
+  "description": "Tags Defined for JCSC specific information",
+  "namespace": "jcsc",
   "exclusive": true
 }
